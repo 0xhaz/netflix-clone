@@ -39,6 +39,14 @@ export default async function handler(
       data: {
         favoriteIds: updatedFavoriteIds,
       },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        walletAddress: true,
+        signature: true,
+        profileId: true,
+      },
     });
 
     return res.status(200).json(updatedUser);
